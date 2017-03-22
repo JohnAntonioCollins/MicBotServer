@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: collins.john.Main
+Main-Class: collins.john.Main
+
