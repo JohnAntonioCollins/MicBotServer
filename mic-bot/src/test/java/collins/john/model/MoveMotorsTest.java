@@ -1,7 +1,7 @@
 /**
  * John Antonio Collins 4/27/17
  **/
-//TODO: change bracket style to "Alman"
+
 package collins.john.model;
 
 import com.pi4j.io.gpio.GpioController;
@@ -19,7 +19,8 @@ public class MoveMotorsTest
 {
 
     //TODO: Q: what to mock exactly for R'Pi? GpioController or individual pins or something in between?
-    //TODO: fix 64 bit library error
+    //TODO: fix 64 bit library error?
+    //TODO: Look up Jenkins and do a deployed test to run on native architecture, ARM 32bit.
 
     @Mock
     GpioController gpioController;
