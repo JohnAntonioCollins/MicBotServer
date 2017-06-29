@@ -1,6 +1,6 @@
 package collins.john.controller;
 
-import collins.john.model.MoveMotors;
+import collins.john.model.MotorMover;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -14,26 +14,21 @@ import static org.mockito.Mockito.verifyNoMoreInteractions;
  * Created by johncollins on 3/7/17.
  */
 @RunWith(MockitoJUnitRunner.class)
-public class MicBotRESTcontrollerTest
+public class RESTcontrollerTest
 {
     @Mock
-    private MoveMotors moveMotors;
+    private MotorMover motorMover;
 
     @InjectMocks
-    private MicBotRESTcontroller controller;
-
-
-    public MicBotRESTcontrollerTest() throws Exception
-    {
-    }
+    private RESTcontroller controller;
 
     @Test
     public void shouldCallMoveMotors_toggleLED()
     {
         controller.toggleLED();
 
-        verify(moveMotors).toggleLED();
-        verifyNoMoreInteractions(moveMotors);
+        verify(motorMover).toggleLED();
+        verifyNoMoreInteractions(motorMover);
     }
 
     @Test
@@ -41,8 +36,8 @@ public class MicBotRESTcontrollerTest
     {
         controller.motor_A_forward();
 
-        verify(moveMotors).motor_A_forward();
-        verifyNoMoreInteractions(moveMotors);
+        verify(motorMover).motor_A_forward();
+        verifyNoMoreInteractions(motorMover);
     }
 
     @Test
@@ -50,8 +45,8 @@ public class MicBotRESTcontrollerTest
     {
         controller.motor_A_reverse();
 
-        verify(moveMotors).motor_A_reverse();
-        verifyNoMoreInteractions(moveMotors);
+        verify(motorMover).motor_A_reverse();
+        verifyNoMoreInteractions(motorMover);
     }
 
     @Test
@@ -59,8 +54,8 @@ public class MicBotRESTcontrollerTest
     {
         controller.motor_B_forward();
 
-        verify(moveMotors).motor_B_forward();
-        verifyNoMoreInteractions(moveMotors);
+        verify(motorMover).motor_B_forward();
+        verifyNoMoreInteractions(motorMover);
     }
 
     @Test
@@ -68,8 +63,8 @@ public class MicBotRESTcontrollerTest
     {
         controller.motor_B_reverse();
 
-        verify(moveMotors).motor_B_reverse();
-        verifyNoMoreInteractions(moveMotors);
+        verify(motorMover).motor_B_reverse();
+        verifyNoMoreInteractions(motorMover);
     }
 
 }
